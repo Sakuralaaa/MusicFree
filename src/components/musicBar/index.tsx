@@ -23,7 +23,7 @@ function CircularPlayBtn() {
         <CircularProgressBase
             activeStrokeWidth={rpx(4)}
             inActiveStrokeWidth={rpx(2)}
-            inActiveStrokeOpacity={0.2}
+            inActiveStrokeOpacity={0.15}
             value={
                 progress?.duration
                     ? (100 * progress.position) / progress.duration
@@ -31,7 +31,7 @@ function CircularPlayBtn() {
             }
             duration={100}
             radius={rpx(36)}
-            activeStrokeColor={colors.musicBarText}
+            activeStrokeColor={colors.primary}
             inActiveStrokeColor={colors.textSecondary}>
             <IconButton
                 accessibilityLabel={"播放或暂停歌曲"}
@@ -86,6 +86,8 @@ function MusicBar() {
                         {
                             backgroundColor: colors.musicBar,
                             paddingRight: safeAreaInsets.right + rpx(24),
+                            borderTopColor: colors.divider,
+                            shadowColor: colors.shadow,
                         },
                     ]}
                     accessible
@@ -101,7 +103,7 @@ function MusicBar() {
                             accessible
                             accessibilityLabel="播放列表"
                             name="playlist"
-                            size={rpx(56)}
+                            size={rpx(52)}
                             onPress={() => {
                                 showPanel("PlayList");
                             }}
@@ -120,10 +122,18 @@ export default memo(MusicBar, () => true);
 const style = StyleSheet.create({
     wrapper: {
         width: "100%",
-        height: rpx(132),
+        height: rpx(140),
         flexDirection: "row",
         alignItems: "center",
         paddingRight: rpx(24),
+        borderTopWidth: 1,
+        shadowOffset: {
+            width: 0,
+            height: -1,
+        },
+        shadowOpacity: 0.05,
+        shadowRadius: 3,
+        elevation: 2,
     },
     actionGroup: {
         width: rpx(200),
@@ -132,6 +142,6 @@ const style = StyleSheet.create({
         alignItems: "center",
     },
     actionIcon: {
-        marginLeft: rpx(36),
+        marginLeft: rpx(32),
     },
 });

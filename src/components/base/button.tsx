@@ -21,17 +21,21 @@ export function Button(props: {
 
     return (
         <TouchableOpacity
-            activeOpacity={0.6}
+            activeOpacity={0.7}
             onPress={onPress}
             style={[
                 styles.bottomBtn,
                 {
                     backgroundColor:
                         type === "normal" ? colors.placeholder : colors.primary,
+                    borderColor: type === "normal" ? colors.divider : colors.primary,
                 },
                 style,
             ]}>
-            <ThemeText color={type === "normal" ? undefined : "white"}>
+            <ThemeText 
+                color={type === "normal" ? undefined : "white"}
+                fontWeight="medium"
+            >
                 {text}
             </ThemeText>
         </TouchableOpacity>
@@ -40,10 +44,11 @@ export function Button(props: {
 
 const styles = StyleSheet.create({
     bottomBtn: {
-        borderRadius: rpx(8),
+        borderRadius: rpx(6),
+        borderWidth: 1,
         flexShrink: 0,
         justifyContent: "center",
         alignItems: "center",
-        height: rpx(72),
+        height: rpx(76),
     },
 });

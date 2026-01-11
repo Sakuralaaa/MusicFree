@@ -256,12 +256,12 @@ function BottomButton(props: {
 
 const styles = StyleSheet.create({
     bottomBtn: {
-        borderRadius: rpx(8),
+        borderRadius: rpx(6),
         flex: 1,
         flexShrink: 0,
         justifyContent: "center",
         alignItems: "center",
-        height: rpx(72),
+        height: rpx(76),
     },
     backContainer: {
         position: "absolute",
@@ -286,14 +286,14 @@ const styles = StyleSheet.create({
         position: "absolute",
         width: "80%",
         zIndex: 16310,
-        borderRadius: rpx(16),
+        borderRadius: rpx(12),
         backgroundColor: "red",
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 4,
         },
-        shadowOpacity: 0.5,
-        shadowRadius: 4,
+        shadowOpacity: 0.15,
+        shadowRadius: 12,
 
         elevation: 5,
     },
@@ -304,7 +304,7 @@ const styles = StyleSheet.create({
 
     /**** title */
     titleContainer: {
-        height: rpx(88),
+        height: rpx(100),
         width: "100%",
         alignItems: "center",
         justifyContent: "center",
@@ -315,21 +315,21 @@ const styles = StyleSheet.create({
     contentContainer: {
         width: "100%",
         paddingHorizontal: rpx(24),
-        paddingVertical: rpx(36),
+        paddingVertical: rpx(32),
     },
     /** actions */
     actionsContainer: {
         width: "100%",
-        height: rpx(88),
+        height: rpx(96),
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "flex-end",
         paddingHorizontal: rpx(24),
-        marginBottom: rpx(12),
+        marginBottom: rpx(16),
         flexWrap: "nowrap",
     },
     actionButton: {
-        marginLeft: rpx(24),
+        marginLeft: rpx(20),
     },
 });
 

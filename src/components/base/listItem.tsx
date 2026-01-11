@@ -320,13 +320,14 @@ const styles = StyleSheet.create({
     leftImage: {
         width: rpx(80),
         height: rpx(80),
-        borderRadius: rpx(16),
+        borderRadius: rpx(8),
     },
     imageMask: {
         position: "absolute",
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#00000022",
+        borderRadius: rpx(8),
     },
     itemContentContainer: {
         flex: 1,
@@ -334,11 +335,11 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     contentDesc: {
-        marginTop: rpx(16),
+        marginTop: rpx(10),
     },
 
     listItemHeader: {
-        marginTop: rpx(20),
+        marginTop: rpx(24),
     },
 });
 

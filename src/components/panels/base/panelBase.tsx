@@ -220,8 +220,8 @@ const style = StyleSheet.create({
         position: "absolute",
         width: rpx(750),
         right: 0,
-        borderTopLeftRadius: rpx(28),
-        borderTopRightRadius: rpx(28),
+        borderTopLeftRadius: rpx(16),
+        borderTopRightRadius: rpx(16),
         zIndex: 15010,
     },
     kbContainer: {

@@ -3,25 +3,25 @@ import rpx from "@/utils/rpx";
 
 const fontSizeConst = {
     /** 标签 */
-    tag: rpx(20),
+    tag: rpx(22),
     /** 描述文本等字体 */
-    description: rpx(22),
+    description: rpx(24),
     /** 副标题 */
-    subTitle: rpx(26),
+    subTitle: rpx(28),
     /** 正文字体 */
-    content: rpx(28),
+    content: rpx(30),
     /** 标题字体 */
-    title: rpx(32),
+    title: rpx(34),
     /** appbar的字体 */
-    appbar: rpx(36),
+    appbar: rpx(40),
 };
 
 const fontWeightConst = {
     regular: "400",
     medium: "500",
     semibold: "600",
-    bold: "700",
-    bolder: "800",
+    bold: "600",
+    bolder: "700",
 } as const;
 
 const iconSizeConst = {

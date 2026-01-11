@@ -21,10 +21,13 @@ export default function ActionButton(props: IActionButtonProps) {
     return (
         <TouchableOpacity
             onPress={action}
+            activeOpacity={0.7}
             style={[
                 styles.wrapper,
                 {
                     backgroundColor: colors.card,
+                    borderColor: colors.divider,
+                    shadowColor: colors.shadow,
                 },
                 style,
             ]}>
@@ -32,13 +35,13 @@ export default function ActionButton(props: IActionButtonProps) {
                 <Icon
                     accessible={false}
                     name={iconName}
-                    color={iconColor ?? colors.text}
-                    size={rpx(48)}
+                    color={iconColor ?? colors.primary}
+                    size={rpx(44)}
                 />
                 <ThemeText
                     accessible={false}
                     fontSize="subTitle"
-                    fontWeight="semibold"
+                    fontWeight="medium"
                     style={styles.text}>
                     {title}
                 </ThemeText>
@@ -52,13 +55,21 @@ const styles = StyleSheet.create({
         width: rpx(140),
         height: rpx(144),
         borderRadius: rpx(12),
+        borderWidth: 1,
         flexGrow: 1,
         flexShrink: 0,
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.05,
+        shadowRadius: 2,
+        elevation: 1,
     },
     text: {
-        marginTop: rpx(12),
+        marginTop: rpx(14),
     },
 });

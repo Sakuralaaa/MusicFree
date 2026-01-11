@@ -12,7 +12,7 @@ export default function Empty(props: IEmptyProps) {
 
     return (
         <View style={style.wrapper}>
-            <ThemeText fontSize="title">
+            <ThemeText fontSize="subTitle" fontColor="textSecondary">
                 {props?.content ?? t("common.emptyList")}
             </ThemeText>
         </View>

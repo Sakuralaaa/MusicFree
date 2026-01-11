@@ -60,16 +60,16 @@ const styles = StyleSheet.create({
     container: {
         width: rpx(750),
         paddingHorizontal: rpx(24),
-        marginVertical: rpx(32),
+        marginVertical: rpx(28),
         flexDirection: "row",
         flexWrap: "nowrap",
     },
     actionButtonStyle: {
         width: rpx(157.5),
-        height: rpx(160),
-        borderRadius: rpx(18),
+        height: rpx(150),
+        borderRadius: rpx(12),
     },
     actionMarginLeft: {
-        marginLeft: rpx(24),
+        marginLeft: rpx(20),
     },
 });

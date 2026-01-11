@@ -18,12 +18,13 @@ export default function Loading(props: ILoadingProps) {
 
     return (
         <View style={[style.wrapper, { height }]}>
-            <ActivityIndicator animating color={color ?? colors.text} />
+            <ActivityIndicator animating color={color ?? colors.primary} size="small" />
             {showText ? (
                 <ThemeText
                     color={color}
-                    fontSize="title"
-                    fontWeight="semibold"
+                    fontSize="subTitle"
+                    fontWeight="medium"
+                    fontColor="textSecondary"
                     style={style.text}>
                     {text ?? t("common.loading")}
                 </ThemeText>
@@ -40,6 +41,6 @@ const style = StyleSheet.create({
         alignItems: "center",
     },
     text: {
-        marginTop: rpx(48),
+        marginTop: rpx(36),
     },
 });
