@@ -4,6 +4,7 @@ import Operations from "./operations";
 import { StyleSheet, View } from "react-native";
 import Sheets from "../homeBody/sheets";
 import useColors from "@/hooks/useColors";
+import rpx from "@/utils/rpx";
 
 export default function HomeBodyHorizontal() {
     const colors = useColors();
@@ -21,6 +22,6 @@ export default function HomeBodyHorizontal() {
 const styles = StyleSheet.create({
     sheetsContainer: {
         flex: 1,
-        paddingTop: 8,
+        paddingTop: rpx(16),
     },
 });
