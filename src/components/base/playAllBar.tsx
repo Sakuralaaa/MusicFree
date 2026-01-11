@@ -110,7 +110,7 @@ export default function (props: IProps) {
 const style = StyleSheet.create({
     /** playall */
     topWrapper: {
-        height: rpx(84),
+        height: rpx(96),
         paddingHorizontal: rpx(24),
         flexDirection: "row",
         alignItems: "center",
@@ -121,9 +121,9 @@ const style = StyleSheet.create({
         alignItems: "center",
     },
     playAllIcon: {
-        marginRight: rpx(12),
+        marginRight: rpx(14),
     },
     optionButton: {
-        marginLeft: rpx(36),
+        marginLeft: rpx(32),
     },
 });
