@@ -17,7 +17,7 @@ export default function NavBar() {
     const { t } = useI18N();
 
     return (
-        <View style={styles.appbar}>
+        <View style={[styles.appbar, { borderBottomColor: colors.divider }]}>
             <IconButton
                 accessibilityLabel={t("home.openSidebar.a11y")}
                 name="bars-3"
@@ -33,6 +33,7 @@ export default function NavBar() {
                     styles.searchBar,
                     {
                         backgroundColor: colors.placeholder,
+                        borderColor: colors.divider,
                     },
                 ]}
                 accessible
@@ -44,12 +45,13 @@ export default function NavBar() {
                     accessible={false}
                     name="magnifying-glass"
                     size={rpx(32)}
-                    color={Color(colors.text).alpha(0.6).toString()}
+                    color={Color(colors.text).alpha(0.45).toString()}
                 />
                 <ThemeText
                     accessible={false}
                     fontSize="subTitle"
-                    style={[styles.text]}>
+                    style={[styles.text]}
+                    fontColor="textSecondary">
                     {t("home.clickToSearch")}
                 </ThemeText>
             </Pressable>
@@ -64,21 +66,22 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         width: "100%",
-        height: rpx(88),
+        height: rpx(100),
+        paddingVertical: rpx(12),
+        borderBottomWidth: 1,
     },
     searchBar: {
         marginHorizontal: rpx(24),
         flexDirection: "row",
         alignItems: "center",
         flex: 1,
-        height: "72%",
-        maxHeight: rpx(64),
-        borderRadius: rpx(36),
+        height: rpx(72),
+        borderRadius: rpx(8),
+        borderWidth: 1,
         paddingHorizontal: rpx(20),
     },
     text: {
-        marginLeft: rpx(12),
-        opacity: 0.6,
+        marginLeft: rpx(14),
     },
     menu: {
         marginLeft: rpx(24),

@@ -20,14 +20,14 @@ export default function Fab(props: IFabProps) {
             style={[
                 styles.container,
                 {
-                    backgroundColor: colors.backdrop,
+                    backgroundColor: colors.primary,
                     shadowColor: colors.shadow,
                 },
             ]}>
             {icon ? (
                 <Icon
                     name={icon}
-                    color={colors.text}
+                    color="#FFFFFF"
                     size={iconSizeConst.normal}
                 />
             ) : null}
@@ -37,9 +37,9 @@ export default function Fab(props: IFabProps) {
 
 const styles = StyleSheet.create({
     container: {
-        width: rpx(108),
-        height: rpx(108),
-        borderRadius: rpx(54),
+        width: rpx(96),
+        height: rpx(96),
+        borderRadius: rpx(16),
         position: "absolute",
         zIndex: 10010,
         right: rpx(36),
@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
         shadowOffset: {
             width: 0,
-            height: 5,
+            height: 4,
         },
-        shadowOpacity: 0.34,
-        shadowRadius: 6.27,
+        shadowOpacity: 0.15,
+        shadowRadius: 8,
 
-        elevation: 10,
+        elevation: 6,
     },
 });

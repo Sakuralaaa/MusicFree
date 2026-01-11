@@ -17,11 +17,13 @@ export default function Input(props: IInputProps) {
 
     const defaultStyle = {
         color: currentColor,
+        borderColor: colors.divider,
+        backgroundColor: colors.placeholder,
     };
 
     return (
         <TextInput
-            placeholderTextColor={Color(currentColor).alpha(0.7).toString()}
+            placeholderTextColor={Color(currentColor).alpha(0.5).toString()}
             {...props}
             style={[
                 hasHorizontalPadding
@@ -36,8 +38,10 @@ export default function Input(props: IInputProps) {
 
 const styles = StyleSheet.create({
     container: {
-        paddingVertical: 0,
+        paddingVertical: rpx(12),
         paddingHorizontal: rpx(24),
+        borderRadius: rpx(6),
+        borderWidth: 1,
     },
     containerWithoutPadding: {
         padding: 0,

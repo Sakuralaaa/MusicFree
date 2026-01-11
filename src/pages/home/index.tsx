@@ -13,12 +13,17 @@ import Theme from "@/core/theme";
 import HomeBody from "./components/homeBody";
 import HomeBodyHorizontal from "./components/homeBodyHorizontal";
 import useOrientation from "@/hooks/useOrientation";
+import useColors from "@/hooks/useColors";
 
 function Home() {
     const orientation = useOrientation();
+    const colors = useColors();
 
     return (
-        <SafeAreaView edges={["top", "bottom"]} style={styles.appWrapper}>
+        <SafeAreaView 
+            edges={["top", "bottom"]} 
+            style={[styles.appWrapper, { backgroundColor: colors.pageBackground }]}
+        >
             <HomeStatusBar />
             <HorizontalSafeAreaView style={globalStyle.flex1}>
                 <>

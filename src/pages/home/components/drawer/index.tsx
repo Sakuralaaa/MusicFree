@@ -232,7 +232,7 @@ const style = StyleSheet.create({
         backgroundColor: "#999999",
     },
     scrollWrapper: {
-        paddingTop: rpx(12),
+        paddingTop: rpx(16),
     },
 
     header: {
@@ -242,9 +242,10 @@ const style = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         marginLeft: rpx(24),
+        marginBottom: rpx(12),
     },
     card: {
-        marginBottom: rpx(24),
+        marginBottom: rpx(20),
     },
     cardContent: {
         paddingHorizontal: 0,

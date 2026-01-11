@@ -198,22 +198,23 @@ const styles = StyleSheet.create({
         paddingHorizontal: rpx(24),
         flexDirection: "row",
         alignItems: "flex-start",
-        marginBottom: rpx(12),
+        marginBottom: rpx(16),
+        marginTop: rpx(8),
     },
     subTitleLeft: {
         flexDirection: "row",
     },
     tabContainer: {
         flexDirection: "row",
-        marginRight: rpx(32),
+        marginRight: rpx(36),
     },
 
     tabText: {
         lineHeight: rpx(64),
     },
     selectTabText: {
-        borderBottomWidth: rpx(6),
-        fontWeight: "bold",
+        borderBottomWidth: rpx(4),
+        fontWeight: "600",
     },
     more: {
         height: rpx(64),
@@ -223,6 +224,6 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
     },
     newSheetButton: {
-        marginRight: rpx(24),
+        marginRight: rpx(20),
     },
 });

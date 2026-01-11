@@ -74,7 +74,7 @@ export default function AppBar(props: IAppBarProps) {
     const colors = useColors();
     const navigation = useNavigation();
 
-    const bgColor = color(colors.appBar ?? colors.primary).toString();
+    const bgColor = color(colors.appBar ?? colors.card).toString();
     const contentColor = _color ?? colors.appBarText;
 
     const [showMenu, setShowMenu] = useState(false);
@@ -103,7 +103,10 @@ export default function AppBar(props: IAppBarProps) {
                 style={[
                     styles.container,
                     containerStyle,
-                    { backgroundColor: bgColor },
+                    { 
+                        backgroundColor: bgColor,
+                        borderBottomColor: colors.divider,
+                    },
                 ]}>
                 <IconButton
                     name="arrow-left"
@@ -121,7 +124,7 @@ export default function AppBar(props: IAppBarProps) {
                     {typeof children === "string" ? (
                         <ThemeText
                             fontSize="title"
-                            fontWeight="bold"
+                            fontWeight="semibold"
                             numberOfLines={1}
                             color={
                                 titleTextOpacity !== 1
@@ -176,7 +179,7 @@ export default function AppBar(props: IAppBarProps) {
                         pointerEvents={showMenu ? "auto" : "none"}
                         style={[
                             {
-                                borderBottomColor: colors.background,
+                                borderBottomColor: colors.backdrop,
                                 left:
                                     (menuIconLayout?.x ?? 0) +
                                     (menuIconLayout?.width ?? 0) / 2 -
@@ -196,7 +199,7 @@ export default function AppBar(props: IAppBarProps) {
                         pointerEvents={showMenu ? "auto" : "none"}
                         style={[
                             {
-                                backgroundColor: colors.background,
+                                backgroundColor: colors.backdrop,
                                 right: rpx(24),
                                 top:
                                     (menuIconLayout?.y ?? 0) +
@@ -206,6 +209,7 @@ export default function AppBar(props: IAppBarProps) {
                                         ? OriginalStatusBar.currentHeight ?? 0
                                         : 0),
                                 shadowColor: colors.shadow,
+                                borderColor: colors.divider,
                             },
                             transformStyle,
                             styles.menu,
@@ -239,19 +243,20 @@ const styles = StyleSheet.create({
     container: {
         width: "100%",
         zIndex: 10000,
-        height: rpx(88),
+        height: rpx(100),
         flexDirection: "row",
         alignItems: "center",
         paddingHorizontal: rpx(24),
+        borderBottomWidth: 1,
     },
     content: {
         flexDirection: "row",
         flexBasis: 0,
         alignItems: "center",
-        paddingHorizontal: rpx(24),
+        paddingHorizontal: rpx(20),
     },
     rightButton: {
-        marginLeft: rpx(28),
+        marginLeft: rpx(24),
     },
     blocker: {
         position: "absolute",
@@ -273,15 +278,16 @@ const styles = StyleSheet.create({
         width: rpx(340),
         maxHeight: rpx(600),
         borderRadius: rpx(8),
+        borderWidth: 1,
         zIndex: 10011,
         position: "absolute",
         opacity: 0,
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 4,
         },
-        shadowOpacity: 0.23,
-        shadowRadius: 2.62,
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
         elevation: 4,
     },
 });

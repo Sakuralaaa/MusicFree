@@ -15,7 +15,7 @@ export default function Tag(props: ITagProps) {
         <View
             style={[
                 styles.tag,
-                { backgroundColor: colors.card, borderColor: colors.divider },
+                { backgroundColor: colors.placeholder, borderColor: colors.divider },
                 props.containerStyle,
             ]}>
             <ThemeText style={[styles.tagText, props.style]} fontSize="tag">
@@ -27,10 +27,10 @@ export default function Tag(props: ITagProps) {
 
 const styles = StyleSheet.create({
     tag: {
-        height: rpx(32),
+        height: rpx(34),
         marginLeft: rpx(12),
-        paddingHorizontal: rpx(12),
-        borderRadius: rpx(24),
+        paddingHorizontal: rpx(14),
+        borderRadius: rpx(4),
         justifyContent: "center",
         alignItems: "center",
         flexShrink: 0,
